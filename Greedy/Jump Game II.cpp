@@ -45,7 +45,7 @@ public:
                     pos = i + j;                        //更新pos
                 }
             }
-            i = pos;                                    
+            i = pos;                                    //更新遍历所用变量                               
             }
         }
         return cnt;
