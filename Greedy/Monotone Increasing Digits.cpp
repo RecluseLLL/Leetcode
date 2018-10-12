@@ -30,19 +30,19 @@ class Solution {
 public:
     int monotoneIncreasingDigits(int N) 
     {
-        string ret = to_string(N);
+        string ret = to_string(N);                               //数字转化为字符串方便对其每一位处理
         int len = ret.size();
         for(int i = 0; i < len - 1; i++)
         {
-            int index = i;                                      //记录处理数位
+            int index = i;                                       //记录处理数位
             if(ret[i] > ret[i + 1])
             {
-                while(ret[index] == ret[index - 1] && index > 0)
+                while(ret[index] == ret[index - 1] && index > 0) //找到合适的处理数位
                 {
                     index--;
                 }
                 ret[index]--;
-                for(index++; index < len; index++)
+                for(index++; index < len; index++)               //对处理数位后的所有数位（如果存在）置为9
                 {
                     ret[index] = '9';
                 }
