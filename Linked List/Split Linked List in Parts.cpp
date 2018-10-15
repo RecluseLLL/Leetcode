@@ -69,7 +69,7 @@ public:
         int each_len = len / k, surplus = len % k, cnt;      //平均长度和多余的结点个数 
         curr = root;
         ListNode *tmphead = root, *temp;                    
-        for(i = 1; i <= surplus; i++)                        //对前len % k组的链表 每一组长度 + 1
+        for(i = 1; i <= surplus; i++)                        //对前len % k组的链表 每一组长度 + 1 这一部分和下面的部分有重叠的部分 可以使得surplus自减 然后使用三目运算符进行合并
         {
             cnt = 1;
             tmphead = curr;
