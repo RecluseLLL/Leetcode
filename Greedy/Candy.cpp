@@ -41,7 +41,7 @@ class Solution
             for(i = 0; i < len -1;)
             {
                 if(ratings[i +1] > ratings[i])                       //单调递增序列
-                {1
+                {
                     start = i;
                     while(i < len -1 && ratings[i+1] > ratings[i])   //找到单调递增序列的结束位置
                     {
@@ -67,7 +67,7 @@ class Solution
                     }
                 }
                 else
-                { 
+                {  
                     i++;
                 }
 
